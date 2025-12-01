@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Влад - Портфолио</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5f8d 50%, #4a7ba7 100%);
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            font-size: 1em;
+            user-select: none;
+            z-index: 1000;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #b3d9ff;
+            margin-top: 10px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(135, 206, 250, 0.4);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #b3d9ff;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .skills {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: rgba(135, 206, 250, 0.3);
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .skill:hover {
+            background: rgba(135, 206, 250, 0.5);
+            transform: scale(1.1);
+        }
+
+        .info-item {
+            margin: 15px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .ice-crystal {
+            display: inline-block;
+            color: #87ceeb;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: rgba(135, 206, 250, 0.4);
+            border: 2px solid #87ceeb;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: rgba(135, 206, 250, 0.6);
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(135, 206, 250, 0.5);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .skills {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Влад</h1>
+        <p class="subtitle">Начинающий разработчик | 14 лет</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Обо мне</h2>
+            <p class="info-item">
+                Привет! Меня зовут Влад, мне 14 лет. Я увлекаюсь программированием и постоянно изучаю новые технологии. Занимаюсь разработкой уже 3 года и люблю создавать интересные проекты. Мой основной стек - Python и Java, но я также работаю с веб-технологиями и всегда открыт к изучению чего-то нового.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Навыки и технологии</h2>
+            <div class="skills">
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">HTML/CSS/JS</div>
+                <div class="skill">3 года опыта</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Что я умею</h2>
+            <p class="info-item">
+                Разработка программ на Python для автоматизации задач, обработки данных и создания различных утилит. Работаю с библиотеками и фреймворками.
+            </p>
+            <p class="info-item">
+                Создание приложений на Java с использованием ООП принципов. Понимаю архитектуру приложений и работу с различными API.
+            </p>
+            <p class="info-item">
+                Веб-разработка: создание адаптивных сайтов с современным дизайном, работа с JavaScript для интерактивности.
+            </p>
+            <p class="info-item">
+                Сборка проектов с нуля по техническому описанию - от анализа требований до реализации готового решения.
+            </p>
+            <p class="info-item">
+                Решение алгоритмических задач, работа с различными структурами данных и оптимизация кода.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Мои цели и планы</h2>
+            <p class="info-item">
+                Продолжать развиваться как разработчик и осваивать новые технологии. В планах изучение backend-фреймворков, баз данных и углубление знаний в разработке.
+            </p>
+            <p class="info-item">
+                Участвовать в реальных проектах, набираться опыта и создавать полезные приложения, которые решают конкретные задачи.
+            </p>
+            <p class="info-item">
+                Стать профессиональным разработчиком и работать над интересными и масштабными проектами в будущем.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Спасибо за внимание!</p>
+        <a href="https://t.me/HolopeoManopeo" class="contact-btn" target="_blank">Связаться со мной</a>
+    </footer>
+
+    <script>
+        function createSnowflake(x, y) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = x + 'px';
+            snowflake.style.top = y + 'px';
+            snowflake.style.animationDuration = Math.random() * 2 + 3 + 's';
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            snowflake.style.opacity = Math.random() * 0.5 + 0.3;
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(() => {
+            createSnowflake(Math.random() * window.innerWidth, -10);
+        }, 300);
+
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => {
+                createSnowflake(Math.random() * window.innerWidth, -10);
+            }, i * 200);
+        }
+
+        let lastMouseMove = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastMouseMove > 100) {
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const offsetX = (Math.random() - 0.5) * 20;
+                        const offsetY = (Math.random() - 0.5) * 20;
+                        createSnowflake(e.pageX + offsetX, e.pageY + offsetY);
+                    }, i * 30);
+                }
+                lastMouseMove = now;
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const offsetX = (Math.random() - 0.5) * 30;
+                    const offsetY = (Math.random() - 0.5) * 30;
+                    createSnowflake(e.pageX + offsetX, e.pageY + offsetY);
+                }, i * 50);
+            }
+        });
+    </script>
+</body>
+</html>
